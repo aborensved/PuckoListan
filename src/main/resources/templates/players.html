@@ -15,10 +15,15 @@
 
             <!--<p th:text="${playerobject.getLastName()}"></p-->
             <p th:text="${playerobject.getPosition()}"></p>
+            <hr>
             <p th:text="${playerobject.getAge()}"></p>
+            <hr>
             <p th:text="${playerobject.getHeightUnits()}"></p>
+            <hr>
             <p th:text="${playerobject.getWeightUnits()}"></p>
+            <hr>
             <p th:text="${playerobject.getInfo()}"></p>
+            <hr>
             <button type="button" class="btn btn-outline-dark" th:data-id="${playerobject.getId()}" th:onclick="handleDelete(this.getAttribute('data-id'))">Remove player</button>
         </div>
         <a th:href="@{/hockey/addPlayer}"><button type="button" class="btn btn-dark" >Add new player</button></a>

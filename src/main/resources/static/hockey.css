@@ -9,6 +9,7 @@
 .main-headline {
     text-align: center;
     color: white;
+    margin-bottom: 3rem;
 }
 
 .puck-bg {
@@ -21,7 +22,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     width: 50vw;
+    font-size:1rem;
 
 }
 
@@ -33,3 +36,28 @@
     box-shadow: 2px 5px 8px rgba(26, 9, 44, 0.78);
 
 }
+
+.add-player-headline{
+    margin-top:2rem;
+    text-align: center;
+}
+
+.player-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top:2rem;
+}
+
+.mb-3{
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+}
+
+.input-group-text{
+    justify-content: center;
+}
+
