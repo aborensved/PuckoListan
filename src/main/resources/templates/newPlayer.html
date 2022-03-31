@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h3>Add new player</h3>
+        <form method="post" th:action="@{/hockey}">
+            <input type="text" name="title" placeholder="Enter players name...">
+            <br>
+            <input type="text" name="position" placeholder="Enter players position...">
+            <br>
+            <input type="text" name="age" placeholder="Enter players age...">
+            <br>
+            <input type="text" name="height" placeholder="Enter players height...">
+            <br>
+            <input type="text" name="weight" placeholder="Enter players weight...">
+            <br>
+
+            <textarea name="info" placeholder="Write some info here...."></textarea>
+            <br>
+            <input type="submit" value="Save">
+        </form>
+    </div>
+
+</body>
+</html>

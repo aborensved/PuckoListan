@@ -4,6 +4,7 @@ package com.example.puckolistan.controllers;
 import com.example.puckolistan.entities.PlayerObject;
 import com.example.puckolistan.services.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +36,23 @@ public class PlayerController {
     @GetMapping("/{id}")
     public PlayerObject getPlayerObjectById(@PathVariable("id") int id){
         return playerService.findPlayerById(id);
+    }
+
+    @GetMapping("/addPlayer")
+    public String addPlayer(){
+        return "newPlayer";
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletePlayerById(@PathVariable("id") int id){
+        playerService.deleteById(id);
+        return ResponseEntity.status(303).header("Location", "/hockey").build();
+    }
+
+    @PostMapping
+    public String createPlayer(@ModelAttribute PlayerObject player){
+        playerService.save(player);
+        return "redirect:/hockey";
     }
 
 }

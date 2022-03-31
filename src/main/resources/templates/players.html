@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Hockeypersons</title>
     <link rel="stylesheet" th:href="@{/hockey.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
@@ -16,7 +17,10 @@
             <p th:text="${playerobject.getHeightUnits()}"></p>
             <p th:text="${playerobject.getWeightUnits()}"></p>
             <p th:text="${playerobject.getInfo()}"></p>
+            <button type="button" class="btn btn-outline-dark" th:data-id="${playerobject.getId()}" th:onclick="handleDelete(this.getAttribute('data-id'))">Remove player</button>
         </div>
+        <a th:href="@{/hockey/addPlayer}"><button type="button" class="btn btn-dark" >Add new player</button></a>
     </div>
+<script type="text/javascript" th:src="@{/hockey.js}"></script>
 </body>
 </html>

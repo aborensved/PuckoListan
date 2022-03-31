@@ -27,9 +27,9 @@ public class PlayerService {
         return playerRepository.findById(id).orElseThrow();
     }
 
-    //public PlayerObject save(PlayerObject playerObject){
-    //    return playerRepository.save(playerObject);
-    //}
+    public PlayerObject save(PlayerObject playerObject){
+        return playerRepository.save(playerObject);
+    }
 
     public void deleteById(int id){
         playerRepository.deleteById(id);
