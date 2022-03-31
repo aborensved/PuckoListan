@@ -2,16 +2,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>"Hockey Bockey Men and or Women and such" som en skotte sa</title>
+    <title>Hockeypersons</title>
+    <link rel="stylesheet" th:href="@{/hockey.css}">
 </head>
 <body>
-    <div class="container">
-        <h2>Hockey persons</h2>
-        <div th:each="playerobject : ${playerObjectList}">
-            <h3 th:text="${playerobject.getFirstName()}"></h3>
-            <p th:text="${playerobject.getLastName()}"></p>
+<div class="container">
+    <h1>Hockey persons</h1>
+        <div th:each="playerobject : ${playerObjectList}" class="players">
+            <h3 th:text="${playerobject.getName()}"></h3>
+            <!--p th:text="${playerobject.getLastName()}"></p-->
+            <p th:text="${playerobject.getPosition()}"></p>
+            <p th:text="${playerobject.getAge()}"></p>
+            <p th:text="${playerobject.getHeightUnits()}"></p>
+            <p th:text="${playerobject.getWeightUnits()}"></p>
+            <p th:text="${playerobject.getInfo()}"></p>
         </div>
     </div>
-
 </body>
 </html>

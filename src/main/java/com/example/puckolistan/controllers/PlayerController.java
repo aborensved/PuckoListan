@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/hockey")
 public class PlayerController {
 
-    @Autowired
+    //@Autowired
     PlayerService playerService;
 
     public PlayerController(PlayerService playerService) {
@@ -23,9 +23,10 @@ public class PlayerController {
 
     @GetMapping
     public String getPlayerObjectList (
-            //@RequestParam(required = false) String name,
+            @RequestParam(required = false) String name,
             Model model) {
-        List<PlayerObject> playerObjectList = playerService.findPlayer("");
+        //Ändrat till null för att If sats i service inte ska ta fel.
+        List<PlayerObject> playerObjectList = playerService.findPlayer(name);
         model.addAttribute("playerObjectList", playerObjectList);
         //return playerObjectList;
         return "players";

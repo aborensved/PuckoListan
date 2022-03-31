@@ -82,6 +82,10 @@ public class PlayerObject {
         return lastName;
     }
 
+    public String getName() {
+        return firstName + " " + lastName;
+    }
+
     public int getAge() {
         return age;
     }
@@ -90,8 +94,18 @@ public class PlayerObject {
         return height;
     }
 
+    public String getHeightUnits() {
+        String hUnit = height + " cm";
+        return hUnit;
+    }
+
     public int getWeight() {
         return weight;
+    }
+
+    public String getWeightUnits() {
+        String wUnit = weight + " kg";
+        return wUnit;
     }
 
     public String getPosition() {

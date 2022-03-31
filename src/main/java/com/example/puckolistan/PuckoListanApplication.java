@@ -18,10 +18,10 @@ public class PuckoListanApplication {
     CommandLineRunner init(PlayerRepository playerRepository){
         return args -> {
 
-            PlayerObject playerObject = new PlayerObject("Isak", "Lejon", 26, 183, 75, "Goalkeeper", "Loose cannon, don't feed after midnight");
-            playerRepository.save(playerObject);
-            PlayerObject playerObject2 = new PlayerObject("Arvid", "Borisweden", 28, 179, 75, "Puckholder", "Likes long walks on the beach at night, walks with a limp on occasion");
-            playerRepository.save(playerObject2);
+            PlayerObject player1 = new PlayerObject("Isak", "Lejon", 26, 183, 75, "Goalkeeper", "Loose cannon, don't feed after midnight");
+            playerRepository.save(player1);
+            PlayerObject player2 = new PlayerObject("Arvid", "Borisweden", 28, 179, 75, "Puckholder", "Likes long walks on the beach at night, walks with a limp on occasion");
+            playerRepository.save(player2);
         };
     }
 

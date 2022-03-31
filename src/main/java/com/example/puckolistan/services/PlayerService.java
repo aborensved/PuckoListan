@@ -17,6 +17,7 @@ public class PlayerService {
     }
 
     public List<PlayerObject> findPlayer(String name){
+        //Kolla upp detta, det ställer till det.
         if (name != null)
             return playerRepository.findPlayerObjectByLastName(name);
             return playerRepository.findAll();

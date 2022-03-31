@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: Consolas;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: #363057;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+}
+
+.players {
+    padding: 10px;
+    background-color: #ffac6b;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 5px 8px rgba(26, 9, 44, 0.78);
+}
