@@ -6,12 +6,14 @@
     font-family: Consolas;
 }
 
-h1 {
+.main-headline {
     text-align: center;
+    color: white;
 }
 
-body {
+.puck-bg {
     background-color: #363057;
+
 }
 
 .container {
@@ -20,6 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 50vw;
+
 }
 
 .players {
@@ -28,4 +31,5 @@ body {
     border-radius: 15px;
     margin-bottom: 20px;
     box-shadow: 2px 5px 8px rgba(26, 9, 44, 0.78);
+
 }

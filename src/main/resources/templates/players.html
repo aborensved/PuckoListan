@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Hockeypersons</title>
-    <link rel="stylesheet" th:href="@{/hockey.css}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/hockey.css}">
 </head>
 <body>
+<div class="puck-bg">
 <div class="container">
-    <h1>Hockey persons</h1>
+    <h1 class="main-headline">Hockey persons</h1>
         <div th:each="playerobject : ${playerObjectList}" class="players">
             <h3 th:text="${playerobject.getName()}"></h3>
-            <!--p th:text="${playerobject.getLastName()}"></p-->
+
+            <!--<p th:text="${playerobject.getLastName()}"></p-->
             <p th:text="${playerobject.getPosition()}"></p>
             <p th:text="${playerobject.getAge()}"></p>
             <p th:text="${playerobject.getHeightUnits()}"></p>
@@ -22,5 +24,6 @@
         <a th:href="@{/hockey/addPlayer}"><button type="button" class="btn btn-dark" >Add new player</button></a>
     </div>
 <script type="text/javascript" th:src="@{/hockey.js}"></script>
+</div>
 </body>
 </html>

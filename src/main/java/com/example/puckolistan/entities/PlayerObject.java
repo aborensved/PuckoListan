@@ -83,7 +83,8 @@ public class PlayerObject {
     }
 
     public String getName() {
-        return firstName + " " + lastName;
+        String fullName = this.firstName+ " " + this.lastName;
+        return fullName;
     }
 
     public int getAge() {
