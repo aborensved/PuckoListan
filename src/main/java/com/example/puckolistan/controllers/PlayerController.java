@@ -4,14 +4,13 @@ package com.example.puckolistan.controllers;
 import com.example.puckolistan.entities.PlayerObject;
 import com.example.puckolistan.services.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/hockey")
 public class PlayerController {
 
@@ -23,11 +22,18 @@ public class PlayerController {
     }
 
     @GetMapping
-    public List<PlayerObject> getPlayerObjectList (@RequestParam(required = false) String name) {
+    public String getPlayerObjectList (
+            //@RequestParam(required = false) String name,
+            Model model) {
+        List<PlayerObject> playerObjectList = playerService.findPlayer("");
+        model.addAttribute("playerObjectList", playerObjectList);
+        //return playerObjectList;
+        return "players";
+    }
 
-
-        List<PlayerObject> playerObjectList = playerService.findPlayer(name);
-        return playerObjectList;
+    @GetMapping("/{id}")
+    public PlayerObject getPlayerObjectById(@PathVariable("id") int id){
+        return playerService.findPlayerById(id);
     }
 
 }

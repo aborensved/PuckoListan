@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>"Hockey Bockey Men and or Women and such" som en skotte sa</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Hockey persons</h2>
+        <div th:each="playerobject : ${playerObjectList}">
+            <h3 th:text="${playerobject.getFirstName()}"></h3>
+            <p th:text="${playerobject.getLastName()}"></p>
+        </div>
+    </div>
+
+</body>
+</html>
